@@ -21,9 +21,8 @@ object Dependencies {
   //test deps
   val junit = "junit" % "junit" % junitVersion % Test
   val scalatest = "org.scalatest" %% "scalatest" % scalatestVersion % Test
-  val h2 = "com.h2database" % "h2" % h2Version % Test
   val flexmark = "com.vladsch.flexmark" % "flexmark-all" % flexmarkVersion % Test
-  val testDeps = Seq(junit,scalatest, h2, flexmark)
+  val testDeps = Seq(junit,scalatest, flexmark)
 
   //akka deps
   val akkaHttp = "com.typesafe.akka" %% "akka-http" % akkaHttpVersion
@@ -36,8 +35,9 @@ object Dependencies {
   val slickCodegen = "com.typesafe.slick" %% "slick-codegen" % slickVersion
   val slickHikariCp = "com.typesafe.slick" %% "slick-hikaricp" % slickVersion
   val postgresql = "org.postgresql" % "postgresql" % postgresqlVersion
+  val h2 = "com.h2database" % "h2" % h2Version
   val idGenerator = "com.softwaremill.common" %% "id-generator" % idGeneratorVersion
-  val dbDeps = Seq(postgresql, slick, slickCodegen, slickHikariCp, idGenerator)
+  val dbDeps = Seq(h2, slick, slickCodegen, slickHikariCp, idGenerator) //for production likely change to postgresql
 
   //misc
   val logbackClassic = "ch.qos.logback" % "logback-classic" % logbackClassicVersion

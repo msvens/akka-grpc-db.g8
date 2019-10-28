@@ -12,7 +12,8 @@ import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.io.StdIn
 
 object UserServerApp extends App {
-  val server = UserServer()
+  val server = UserServer("h2mem_dc") //should be changed to a persitent store in a production app
+  server.dao.createTablesSynced() //we are using an in-memory db so we need to create tables
   println("server started!")
   StdIn.readLine()
   server.shutdown(true)
