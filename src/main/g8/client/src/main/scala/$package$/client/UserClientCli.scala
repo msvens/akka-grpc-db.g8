@@ -14,7 +14,7 @@ import scala.concurrent.{ExecutionContext, Future}
 object UserClientApp extends App {
 
     val client = UserClientCli()
-    val regex = Pattern.compile("[^\\s\"']+|\"([^\"]*)\"|'([^']*)'")
+    val regex = Pattern.compile("[^\\\s\"']+|\"([^\"]*)\"|'([^']*)'")
 
     while (true) {
         Console.print("usercli> ")
