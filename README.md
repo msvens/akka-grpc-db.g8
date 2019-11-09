@@ -3,12 +3,12 @@
 Generate a [Akka GRPC](https://doc.akka.io/docs/akka-grpc/current/index.html) service that connects to a 
 database using [slick](http://slick.lightbend.com/).
 
-This template generates a multi project consisting of the following projects
+This template generates a multi project consisting of the following nodules
 * common - contains protobuf and database code
 * server - contains akka grpc service
 * client - contains an example cli based on [scallop](https://github.com/scallop/scallop)
 
-Dependencies are defined in project/Dependencies. Rudamentary testing is provided that can
+Dependencies are defined in g8/project/Dependencies. Rudamentary testing is provided that can
 easily expanded
 
 ## Quickstart guide
